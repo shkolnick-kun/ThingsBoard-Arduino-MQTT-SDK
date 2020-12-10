@@ -120,6 +120,7 @@ class ThingsBoardDefaultLogger
 {
 public:
   static void log(const char *msg);
+  static Stream * ser;
 };
 
 // ThingsBoardSized client class
