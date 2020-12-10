@@ -49,7 +49,9 @@ bool Telemetry::serializeKeyval(JsonVariant &jsonObj) const {
   return true;
 }
 
+Stream * ThingsBoardDefaultLogger::ser = &Serial;
+
 void ThingsBoardDefaultLogger::log(const char *msg) {
-  Serial.print(F("[TB] "));
-  Serial.println(msg);
+  ser->print(F("[TB] "));
+  ser->println(msg);
 }
